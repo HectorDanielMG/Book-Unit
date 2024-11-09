@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - BookUnit</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    #visitorChart {
+      max-width: 100%;
+      height: 300px;
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-gray-300">
+  <div class="flex">
+    <!-- Panel lateral -->
+    <div class="sidebar w-1/4 min-h-screen p-4 bg-gray-800">
+      <h1 class="text-3xl font-bold mb-4 text-center flex items-center text-white">
+        <i class="fas fa-book-open mr-2"></i>
+        BookUnit
+      </h1>
+      <ul class="space-y-4 text-gray-300">
+        <li class="flex items-center">
+          <i class="fas fa-chart-pie"></i>
+          <a href="/administracion" class="ml-2 hover:text-white">Administración</a>
+        </li>
+        <li class="flex items-center">
+          <i class="fas fa-users"></i>
+          <a href="/usuarios" class="ml-2 hover:text-white">Usuarios</a>
+        </li>
+        <li class="flex items-center">
+          <i class="fas fa-book"></i>
+          <a href="/libros" class="ml-2 hover:text-white">Libros</a>
+        </li>
+        <li class="flex items-center">
+          <i class="fas fa-file-pdf"></i>
+          <a href="/libros-digitales" class="ml-2 hover:text-white">Libros Digitales</a>
+        </li>
+        <li class="flex items-center">
+          <i class="fas fa-shopping-bag"></i>
+          <a href="/prestamos" class="ml-2 hover:text-white">Préstamos</a>
+        </li>
+        <li class="flex items-center">
+          <i class="fas fa-exclamation-circle"></i>
+          <a href="/extravio" class="ml-2 hover:text-white">Extravio</a>
+        </li>
+        <li class="flex items-center">
+          <i class="fas fa-donate"></i>
+          <a href="/donaciones" class="ml-2 hover:text-white">Donaciones</a>
+        </li>
+        <li class="flex items-center">
+          <i class="fas fa-user-circle"></i>
+          <a href="/perfil" class="ml-2 hover:text-white">Perfil</a>
+        </li>
+        <li class="flex items-center">
+          <i class="fas fa-gem"></i>
+          <a href="/cambiar-a-pro" class="ml-2 hover:text-white">Cambiar a Pro</a>
+        </li>
+        <li class="flex items-center">
+          <i class="fas fa-question-circle"></i>
+          <a href="/ayuda" class="ml-2 hover:text-white">Ayuda</a>
+        </li>
+        <li class="flex items-center">
+          <i class="fas fa-sign-in-alt"></i>
+          <a href="/signin" class="ml-2 hover:text-white">Cerrar Sesion</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Área de trabajo principal -->
+    <div class="main-area w-3/4 p-6">
+      <!-- Tarjeta de Visitantes Mensuales -->
+      <div class="bg-white shadow rounded-lg p-4 sm:p-6 xl:p-8 mb-8">
+        <div class="flex items-center justify-between mb-4">
+          <div class="flex-shrink-0">
+            <span class="text-2xl sm:text-3xl leading-none font-bold text-gray-900">5,385</span>
+            <h3 class="text-base font-normal text-gray-500">Visitantes Mensuales</h3>
+          </div>
+          <div class="flex items-center justify-end flex-1 text-green-500 text-base font-bold">
+            12.5%
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M5.293 7.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 5.414V17a1 1 0 11-2 0V5.414L6.707 7.707a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+            </svg>
+          </div>
+        </div>
+        <canvas id="visitorChart"></canvas>
+      </div>
+
+      <!-- Tarjeta de Nuevos Libros -->
+      <div class="bg-gray-800 p-6 rounded-lg mb-8">
+        <h3 class="text-xl font-semibold mb-4">Nuevos Libros Esta Semana</h3>
+        <p class="text-3xl font-bold text-green-400">340</p>
+        <p class="text-sm text-green-500">+14.6% desde la última semana</p>
+      </div>
+
+      <!-- Tarjeta de Usuarios Registrados -->
+      <div class="bg-gray-800 p-6 rounded-lg mb-8">
+        <h3 class="text-xl font-semibold mb-4">Usuarios Registrados Esta Semana</h3>
+        <p class="text-3xl font-bold text-red-400">385</p>
+        <p class="text-sm text-red-500">-2.7% desde la última semana</p>
+      </div>
+
+      <!-- Botones de administración -->
+      <div class="grid grid-cols-2 gap-4 mb-8">
+        <a href="/administrar-libros" class="bg-gray-800 p-6 rounded-lg text-center hover:bg-gray-700">
+          <i class="fas fa-book text-4xl mb-2"></i>
+          <h3 class="text-xl font-semibold">Administrar Libros</h3>
+        </a>
+        <a href="/administrar-usuarios" class="bg-gray-800 p-6 rounded-lg text-center hover:bg-gray-700">
+          <i class="fas fa-users text-4xl mb-2"></i>
+          <h3 class="text-xl font-semibold">Administrar Usuarios</h3>
+        </a>
+        <a href="/administrar-libros-digitales" class="bg-gray-800 p-6 rounded-lg text-center hover:bg-gray-700">
+          <i class="fas fa-file-pdf text-4xl mb-2"></i>
+          <h3 class="text-xl font-semibold">Administrar Libros Digitales</h3>
+        </a>
+        <a href="/administrar-prestamos" class="bg-gray-800 p-6 rounded-lg text-center hover:bg-gray-700">
+          <i class="fas fa-shopping-bag text-4xl mb-2"></i>
+          <h3 class="text-xl font-semibold">Administrar Préstamos</h3>
+        </a>
+        <a href="/administrar-extravio" class="bg-gray-800 p-6 rounded-lg text-center hover:bg-gray-700">
+          <i class="fas fa-exclamation-circle text-4xl mb-2"></i>
+          <h3 class="text-xl font-semibold">Administrar Extravíos</h3>
+        </a>
+        <a href="/administrar-donaciones" class="bg-gray-800 p-6 rounded-lg text-center hover:bg-gray-700">
+          <i class="fas fa-donate text-4xl mb-2"></i>
+          <h3 class="text-xl font-semibold">Administrar Donaciones</h3>
+        </a>
+      </div>
+
+      <!-- Últimos Préstamos -->
+      <div class="bg-gray-800 p-6 rounded-lg mb-8">
+        <h3 class="text-xl font-semibold mb-4">Últimos Préstamos</h3>
+        <table class="w-full text-gray-300">
+          <thead>
+            <tr>
+              <th class="text-left p-2">Transacción</th>
+              <th class="text-left p-2">Fecha y Hora</th>
+              <th class="text-left p-2">Libros</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="p-2">TXN001</td><td class="p-2">2024-11-01 10:30</td><td class="p-2">Libro A</td></tr>
+            <tr><td class="p-2">TXN002</td><td class="p-2">2024-11-01 14:45</td><td class="p-2">Libro B</td></tr>
+            <tr><td class="p-2">TXN003</td><td class="p-2">2024-11-02 09:15</td><td class="p-2">Libro C</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script para gráfico -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    const ctx = document.getElementById('visitorChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['Semana 1', 'Semana 2', 'Semana 3', 'Semana 4'],
+        datasets: [{
+          label: 'Visitantes',
+          data: [1200, 1900, 3000, 5000],
+          borderColor: 'rgb(75, 192, 192)',
+          tension: 0.1
+        }]
+      }
+    });
+  </script>
+</body>
+</html>

@@ -6,6 +6,7 @@
   <title>Dashboard - BookUnit</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <style>
     #visitorChart {
       max-width: 100%;
@@ -64,9 +65,8 @@
         </li>
         <li class="flex items-center">
           <i class="fas fa-sign-in-alt"></i>
-          <a href="/signin" class="ml-2 hover:text-white">Cerrar Sesion</a>
-        </li>
-      </ul>
+          <a class="ml-2 hover:text-blue-500 hover:underline" (click)="onSignOut()">Cerrar Sesión</a>
+        </ul>
     </div>
 
     <!-- Área de trabajo principal -->

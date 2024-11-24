@@ -1,0 +1,12 @@
+.foto_perfil img {
+    object-fit: cover;
+  }
+  
+  .bg-gray-800 {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .bg-gray-800:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
+  }  

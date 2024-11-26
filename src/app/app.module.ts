@@ -7,6 +7,9 @@ import { LoginComponent } from './login/login.component'; // Importar LoginCompo
 import { DashboardComponent } from './dashboard/dashboard.component'; // Importar DashboardComponent
 import { LandingComponent } from './landing/landing.component'; // Importar LandingComponent
 import { AdministracionComponent } from './administracion/administracion.component';
+import { PerfilComponent } from './perfil/perfil.component'; // Import PerfilComponent
+import { ProComponent } from './pro/pro.component'; // Import ProComponent
+import { AyudaComponent } from './ayuda/ayuda.component'; // Import AyudaComponent
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { AdministracionComponent } from './administracion/administracion.compone
     DashboardComponent, // Importar DashboardComponent aquí
     LoginComponent, // Importar LoginComponent aquí
     LandingComponent, // Importar LandingComponent aquí
-    AdministracionComponent,
+    AdministracionComponent, // Importar AdministracionComponent aquí
+    PerfilComponent, // Importar PerfilComponent aquí
+    ProComponent, // Importar ProComponent aquí
+    AyudaComponent, // Importar AyudaComponent aquí
   ],
   providers: [],
 })

@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard - BookUnit</title>
+  <title>Perfil - BookUnit</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link rel="stylesheet" href="ayuda.component.css">
 </head>
 <body class="bg-gray-900 text-gray-300">
   <div class="flex">
@@ -46,14 +47,6 @@
           <a href="/donaciones" class="ml-2 hover:text-white">Donaciones</a>
         </li>
         <li class="flex items-center">
-          <i class="fas fa-sign-in-alt"></i>
-          <a href="/signin" class="ml-2 hover:text-white">Sign In</a>
-        </li>
-        <li class="flex items-center">
-          <i class="fas fa-user-plus"></i>
-          <a href="/signup" class="ml-2 hover:text-white">Sign Up</a>
-        </li>
-        <li class="flex items-center">
           <i class="fas fa-user-circle"></i>
           <a href="/perfil" class="ml-2 hover:text-white">Perfil</a>
         </li>
@@ -68,12 +61,8 @@
         <li class="flex items-center">
           <i class="fas fa-sign-in-alt"></i>
           <a class="ml-2 hover:text-blue-500 hover:underline" (click)="onSignOut()">Cerrar Sesión</a>
+        </li>
       </ul>
-    </div>
-
-    <!-- Mensaje de bienvenida -->
-    <div class="main-area w-3/4 p-6 flex items-center justify-center">
-      <h2 class="text-4xl font-bold text-white">Bienvenido a Book Unit</h2>
     </div>
   </div>
 </body>

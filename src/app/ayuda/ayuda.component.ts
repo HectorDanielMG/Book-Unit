@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import Swal from 'sweetalert2';
 
 @Component({
-  selector: 'app-administracion',
+  selector: 'app-perfil',
   standalone: true,
-  templateUrl: './administracion.component.html',
+  templateUrl: './ayuda.component.html',
 })
-export class AdministracionComponent {
+export class AyudaComponent {
 
   onSignOut(): void {
     Swal.fire({

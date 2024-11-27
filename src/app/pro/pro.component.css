@@ -50,3 +50,7 @@
     margin: 0.5rem 0;
     color: #a0aec0;
   }  
+
+  .cursor-pointer {
+    cursor: pointer;
+  }

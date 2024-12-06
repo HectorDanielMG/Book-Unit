@@ -76,28 +76,30 @@
       </div>
 
       <!-- Contenedor de tarjetas -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8 mx-auto max-w-6xl">
-        <!-- Tarjeta 1 -->
-        <div class="bg-gray-800 p-6 rounded-lg shadow-lg text-center">
-          <img src="https://via.placeholder.com/150" alt="Le fotaco" class="w-32 h-32 rounded-full mx-auto mb-4">
-          <h3 class="text-xl font-bold text-white">Hector</h3>
-          <ul class="text-sm text-gray-400 mt-4 space-y-2">
-            <li><strong>Ocupación:</strong> Bibliotecario</li>
-            <li><strong>Número de contacto:</strong> +52 123 45 6789</li>
-            <li><strong>Correo:</strong> <a href="mailto:hector&#64;gmail.com" class="text-blue-400 hover:underline">persona&#64;gmail.com</a></li>
-          </ul>
-        </div>
+      <div class="flex justify-center gap-x-4 mt-8">
+        <!-- Primera tarjeta -->
+<div class="bg-gray-800 text-white rounded-lg p-6 w-64">
+  <!-- Espacio para la imagen -->
+  <img [src]="imagenHect" alt="imagen de Hector" class="rounded-full mx-auto" style="width: 150px; height: 150px;">
+
+  
+  <h2 class="mt-4 text-center font-bold">Hector</h2>
+  <p class="text-center">Ocupación: Bibliotecario</p>
+  <p class="text-center">Número de contacto:<br> +52 123 45 6789</p>
+  <a [href]="'mailto:' + correo" class="text-center text-blue-400 hover:underline block">{{ correo }}</a>
+</div>
+
         
-        <!-- Tarjeta 2 -->
-        <div class="bg-gray-800 p-6 rounded-lg shadow-lg text-center">
-          <img src="https://via.placeholder.com/150" alt="Foto de guapo" class="w-32 h-32 rounded-full mx-auto mb-4">
-          <h3 class="text-xl font-bold text-white">Diego C G</h3>
-          <ul class="text-sm text-gray-400 mt-4 space-y-2">
-            <li><strong>Ocupación:</strong> Administrador</li>
-            <li><strong>Número de contacto:</strong> +52 18 02 5658</li>
-            <li><strong>Correo:</strong> <a href="mailto:diegocg&#64;gmail.com" class="text-blue-400 hover:underline">otro&#64;gmail.com</a></li>
-          </ul>
-        </div>
+        <!-- Segunda tarjeta -->
+<div class="bg-gray-800 text-white rounded-lg p-6 w-64">
+  <!-- Aquí se cambia la imagen de fondo a la imagen de Diego -->
+  <img [src]="imagenDCG" alt="imagen de Diego" class="rounded-full mx-auto" style="width: 150px; height: 150px; object-fit: cover;" />
+  <h2 class="mt-4 text-center font-bold">Diego C G</h2>
+  <p class="text-center">Ocupación: Administrador</p>
+  <p class="text-center">Número de contacto:<br> +52 18 02 5658</p>
+  <a [href]="'mailto:' + correoDCG" class="text-center text-blue-400 hover:underline block">{{ correoDCG }}</a>
+</div>
+
       </div>
     </div>
   </div>

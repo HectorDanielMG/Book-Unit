@@ -6,6 +6,7 @@
   <title>Dashboard - BookUnit</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <style>
     #visitorChart {
       max-width: 100%;
@@ -56,7 +57,7 @@
         </li>
         <li class="flex items-center">
           <i class="fas fa-gem"></i>
-          <a href="/cambiar-a-pro" class="ml-2 hover:text-white">Cambiar a Pro</a>
+          <a href="/pro" class="ml-2 hover:text-white">Cambiar a Pro</a>
         </li>
         <li class="flex items-center">
           <i class="fas fa-question-circle"></i>
@@ -64,14 +65,12 @@
         </li>
         <li class="flex items-center">
           <i class="fas fa-sign-in-alt"></i>
-          <a href="/signin" class="ml-2 hover:text-white">Cerrar Sesion</a>
-        </li>
-      </ul>
+          <a class="ml-2 hover:text-blue-500 hover:underline cursor-pointer" (click)="onSignOut()">Cerrar Sesión</a>
+        </ul>
     </div>
 
     <!-- Área de trabajo principal -->
     <div class="main-area w-3/4 p-6">
-      <!-- Tarjeta de Visitantes Mensuales -->
       <div class="bg-white shadow rounded-lg p-4 sm:p-6 xl:p-8 mb-8">
         <div class="flex items-center justify-between mb-4">
           <div class="flex-shrink-0">

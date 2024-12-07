@@ -8,13 +8,6 @@ import { LoginComponent } from './login/login.component'; // Importar LoginCompo
 import { DashboardComponent } from './dashboard/dashboard.component'; // Importar DashboardComponent
 import { LandingComponent } from './landing/landing.component'; // Importar LandingComponent
 import { AdministracionComponent } from './administracion/administracion.component';
-import { UsuariosComponent } from './usuarios/usuarios.component';
-import { FormularioComponent } from './formulario/formulario.component';
-import { LibrosComponent } from './libros/libros.component';
-import { FormularioLibrosComponent } from './formulario-libros/formulario-libros.component';
-import { LibrosDigitalesComponent } from './libros-digitales/libros-digitales.component';
-import { FormularioLibrosDigitalesComponent } from './formulario-libros-digitales/formulario-libros-digitales.component';
-
 
 @NgModule({
   declarations: [
@@ -23,18 +16,10 @@ import { FormularioLibrosDigitalesComponent } from './formulario-libros-digitale
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
-    FormsModule,
-    AppComponent, // Declaramos solo los componentes no autónomos
+    DashboardComponent, // Importar DashboardComponent aquí
+    LoginComponent, // Importar LoginComponent aquí
+    LandingComponent, // Importar LandingComponent aquí
     AdministracionComponent,
-    UsuariosComponent,
-    FormularioComponent,
-    LandingComponent, // Importamos los componentes autónomos
-    DashboardComponent,
-    LoginComponent,
-    LibrosComponent,
-    FormularioLibrosComponent,
-    LibrosDigitalesComponent,
-    FormularioLibrosDigitalesComponent,
   ],
   providers: [],
 })

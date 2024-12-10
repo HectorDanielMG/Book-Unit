@@ -8,6 +8,8 @@ import Swal from 'sweetalert2';
 })
 export class PerfilComponent {
 
+  public imagenDCG: string = 'assets/fotaco.jpeg';
+
   onSignOut(): void {
     Swal.fire({
       title: "¿Estás seguro de cerrar sesión?",

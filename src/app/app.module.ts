@@ -8,6 +8,12 @@ import { LoginComponent } from './login/login.component'; // Importar LoginCompo
 import { DashboardComponent } from './dashboard/dashboard.component'; // Importar DashboardComponent
 import { LandingComponent } from './landing/landing.component'; // Importar LandingComponent
 import { AdministracionComponent } from './administracion/administracion.component';
+import { UsuariosComponent } from './usuarios/usuarios.component';
+import { LibrosComponent } from './libros/libros.component';
+import { LibrosDigitalesComponent } from './libros-digitales/libros-digitales.component';
+import { FormularioComponent } from './formulario/formulario.component';
+import { FormularioLibrosComponent } from './formulario-libros/formulario-libros.component';
+import { FormularioLibrosDigitalesComponent } from './formulario-libros-digitales/formulario-libros-digitales.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +26,13 @@ import { AdministracionComponent } from './administracion/administracion.compone
     LoginComponent, // Importar LoginComponent aquí
     LandingComponent, // Importar LandingComponent aquí
     AdministracionComponent,
+    UsuariosComponent,
+    LibrosComponent,
+    LibrosDigitalesComponent,
+    FormularioComponent,
+    FormularioLibrosComponent,
+    FormularioLibrosDigitalesComponent,
+
   ],
   providers: [],
 })

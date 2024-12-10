@@ -8,6 +8,11 @@ import Swal from 'sweetalert2';
 })
 export class AyudaComponent {
 
+  public correo = "hector@gmail.com";
+  public correoDCG = "diegoCG@gmail.com";
+  public imagenHect: string = 'assets/zoo.jpg';
+  public imagenDCG: string = 'assets/fotaco.jpeg';
+
   onSignOut(): void {
     Swal.fire({
       title: "¿Estás seguro de cerrar sesión?",

@@ -1,0 +1,56 @@
+<div class="flex justify-center items-center min-h-screen bg-gray-700">
+    <div class="bg-gray-800 p-8 rounded-lg shadow-lg w-3/4 md:w-1/2">
+      <h1 class="text-2xl font-bold mb-4 text-center text-white">Agregar Libro Digital</h1>
+      <form>
+        <div class="mb-4">
+          <label for="titulo" class="block text-gray-300 font-bold mb-2">Título del libro:</label>
+          <input 
+            type="text" 
+            id="titulo" 
+            name="titulo" 
+            class="w-full px-3 py-2 text-gray-800 rounded"
+            placeholder="Ingrese el título del libro"
+          >
+        </div>
+    
+        <div class="mb-4">
+          <label for="autor" class="block text-gray-300 font-bold mb-2">Autor:</label>
+          <input 
+            type="text" 
+            id="autor" 
+            name="autor" 
+            class="w-full px-3 py-2 text-gray-800 rounded"
+            placeholder="Ingrese el nombre del autor"
+          >
+        </div>
+    
+        <div class="mb-4">
+          <label for="pdf" class="block text-gray-300 font-bold mb-2">Archivo PDF:</label>
+          <input 
+            type="file" 
+            id="pdf" 
+            name="pdf" 
+            accept="application/pdf"
+            class="w-full px-3 py-2 text-gray-800 rounded"
+          >
+        </div>
+    
+        <div class="flex justify-between">
+          <button 
+            type="submit"
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            Guardar
+          </button>
+    
+          <a href="/libros-digitales">
+            <button 
+              type="button"
+              class="bg-red-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">
+              Cancelar
+            </button>
+          </a>
+        </div>
+      </form>
+    </div>
+  </div>
+  

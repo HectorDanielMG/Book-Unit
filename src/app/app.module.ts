@@ -2,18 +2,22 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { routes } from './app.routes';
-
+import { FormsModule } from '@angular/forms';
+import { AppComponent } from './app.component'; 
 import { LoginComponent } from './login/login.component'; // Importar LoginComponent
 import { DashboardComponent } from './dashboard/dashboard.component'; // Importar DashboardComponent
 import { LandingComponent } from './landing/landing.component'; // Importar LandingComponent
 import { AdministracionComponent } from './administracion/administracion.component';
-import { PerfilComponent } from './perfil/perfil.component'; // Import PerfilComponent
-import { ProComponent } from './pro/pro.component'; // Import ProComponent
-import { AyudaComponent } from './ayuda/ayuda.component'; // Import AyudaComponent
+import { UsuariosComponent } from './usuarios/usuarios.component';
+import { LibrosComponent } from './libros/libros.component';
+import { LibrosDigitalesComponent } from './libros-digitales/libros-digitales.component';
+import { FormularioComponent } from './formulario/formulario.component';
+import { FormularioLibrosComponent } from './formulario-libros/formulario-libros.component';
+import { FormularioLibrosDigitalesComponent } from './formulario-libros-digitales/formulario-libros-digitales.component';
 
 @NgModule({
   declarations: [
-    // No declares AppComponent aquí
+   
   ],
   imports: [
     BrowserModule,
@@ -21,10 +25,14 @@ import { AyudaComponent } from './ayuda/ayuda.component'; // Import AyudaCompone
     DashboardComponent, // Importar DashboardComponent aquí
     LoginComponent, // Importar LoginComponent aquí
     LandingComponent, // Importar LandingComponent aquí
-    AdministracionComponent, // Importar AdministracionComponent aquí
-    PerfilComponent, // Importar PerfilComponent aquí
-    ProComponent, // Importar ProComponent aquí
-    AyudaComponent, // Importar AyudaComponent aquí
+    AdministracionComponent,
+    UsuariosComponent,
+    LibrosComponent,
+    LibrosDigitalesComponent,
+    FormularioComponent,
+    FormularioLibrosComponent,
+    FormularioLibrosDigitalesComponent,
+
   ],
   providers: [],
 })

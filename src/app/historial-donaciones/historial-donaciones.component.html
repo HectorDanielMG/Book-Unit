@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HISTORIAL DONACIONES | BookUnit</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link rel="stylesheet" href="historial-donaciones.component.css">
+</head>
+<body class="bg-gray-900 text-gray-300">
+  <div class="flex">
+    <!-- Panel lateral -->
+    <div class="sidebar w-1/4 min-h-screen p-4 bg-gray-800">
+      <h1 class="text-3xl font-bold mb-4 text-center flex items-center text-white">
+        <i class="fas fa-book-open mr-2"></i>
+        BookUnit
+      </h1>
+      <ul class="space-y-4 text-gray-300">
+        <li class="flex items-center">
+          <i class="fas fa-chart-pie"></i>
+          <a href="/administracion" class="ml-2 hover:text-white">Administración</a>
+        </li>
+        <li class="flex items-center">
+          <i class="fas fa-users"></i>
+          <a href="/usuarios" class="ml-2 hover:text-white">Usuarios</a>
+        </li>
+        <li class="flex items-center">
+          <i class="fas fa-book"></i>
+          <a href="/libros" class="ml-2 hover:text-white">Libros</a>
+        </li>
+        <li class="flex items-center">
+          <i class="fas fa-file-pdf"></i>
+          <a href="/libros-digitales" class="ml-2 hover:text-white">Libros Digitales</a>
+        </li>
+        <li class="flex items-center">
+          <i class="fas fa-shopping-bag"></i>
+          <a href="/prestamos" class="ml-2 hover:text-white">Préstamos</a>
+        </li>
+        <li class="flex items-center">
+          <i class="fas fa-exclamation-circle"></i>
+          <a href="/extravio" class="ml-2 hover:text-white">Extravio</a>
+        </li>
+        <li class="flex items-center">
+          <i class="fas fa-donate"></i>
+          <a href="/donaciones" class="ml-2 hover:text-white">Donaciones</a>
+        </li>
+        <li class="flex items-center">
+          <i class="fas fa-user-circle"></i>
+          <a href="/perfil" class="ml-2 hover:text-white">Perfil</a>
+        </li>
+        <li class="flex items-center">
+          <i class="fas fa-gem"></i>
+          <a href="/pro" class="ml-2 hover:text-white">Cambiar a Pro</a>
+        </li>
+        <li class="flex items-center">
+          <i class="fas fa-question-circle"></i>
+          <a href="/ayuda" class="ml-2 hover:text-white">Ayuda</a>
+        </li>
+        <li class="flex items-center">
+          <i class="fas fa-sign-in-alt"></i>
+          <a class="ml-2 hover:text-blue-500 hover:underline cursor-pointer" (click)="onSignOut()">Cerrar Sesión</a>
+        </li>
+      </ul>
+    </div>
+<!------------------------->
+
+<div class="container mx-auto p-6 bg-gray-900 text-gray-300">
+  <h2 class="text-2xl font-bold text-white mb-4 text-center">HISTORIAL DE DONACIONES</h2>
+
+  <!-- Links adicionales -->
+  <div class="mt-6 flex space-x-4">
+    <a
+      href="/donaciones"
+      class="text-green-400 hover:text-green-500 underline"
+    >
+      Volver
+    </a>
+  </div>
+
+  <!-- Tabla del Historial -->
+  <div class="mt-8">
+    <h3 class="text-xl font-bold text-white mb-4">Historial de Donaciones</h3>
+    <table class="w-full text-gray-300 bg-gray-800 rounded-md">
+      <thead>
+        <tr class="bg-gray-700">
+          <th class="p-2">Donante</th>
+          <th class="p-2">Tipo</th>
+          <th class="p-2">Descripción</th>
+          <th class="p-2">Fecha</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let donacion of historial">
+          <td class="p-2">{{ donacion.donante }}</td>
+          <td class="p-2">{{ donacion.tipoDonacion }}</td>
+          <td class="p-2">{{ donacion.descripcion }}</td>
+          <td class="p-2">{{ donacion.fechaDonacion }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!------------------------->
+  </div>
+</body>
+</html>

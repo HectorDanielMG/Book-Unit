@@ -1,91 +1,169 @@
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Usuarios - Biblioteca</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  
-</head>
-
-  <div class="flex">
-    <div class="sidebar w-1/4 min-h-screen p-4 bg-gray-800">
-      <h1 class="text-3xl font-bold mb-4 text-center flex items-center text-white">
-        <i class="fas fa-book-open mr-2"></i>
-        BookUnit
-      </h1>
-      <ul class="space-y-4 text-gray-300">
-        <li class="flex items-center">
+<div class="flex min-h-screen">
+  <!-- Sidebar -->
+  <div id="sidebar" class="transition-all duration-300 w-16 md:w-64 bg-gray-800 min-h-screen p-4">
+    <h1 class="text-2xl font-bold mb-4 text-center hidden md:flex items-center text-white">
+      <i class="fas fa-book-open mr-2"></i>
+      BookUnit
+    </h1>
+    <ul class="space-y-4 text-gray-300">
+      <li class="flex items-center">
+        <a href="/administracion" class="hover:text-white flex items-center w-full">
           <i class="fas fa-chart-pie"></i>
-          <a href="/administracion" class="ml-2 hover:text-white">Administración</a>
-        </li>
-        <li class="flex items-center">
+          <span class="ml-2 hidden md:inline">Administración</span>
+        </a>
+      </li>
+      <li class="flex items-center">
+        <a href="/usuarios" class="hover:text-white flex items-center w-full">
           <i class="fas fa-users"></i>
-          <a href="/usuarios" class="ml-2 hover:text-white">Usuarios</a>
-        </li>
-        <li class="flex items-center">
+          <span class="ml-2 hidden md:inline">Usuarios</span>
+        </a>
+      </li>
+      <li class="flex items-center">
+        <a href="/libros" class="hover:text-white flex items-center w-full">
           <i class="fas fa-book"></i>
-          <a href="/libros" class="ml-2 hover:text-white">Libros</a>
-        </li>
-        <li class="flex items-center">
+          <span class="ml-2 hidden md:inline">Libros</span>
+        </a>
+      </li>
+      <li class="flex items-center">
+        <a href="/libros-digitales" class="hover:text-white flex items-center w-full">
           <i class="fas fa-file-pdf"></i>
-          <a href="/libros-digitales" class="ml-2 hover:text-white">Libros Digitales</a>
-        </li>
-        <li class="flex items-center">
+          <span class="ml-2 hidden md:inline">Libros Digitales</span>
+        </a>
+      </li>
+      <li class="flex items-center">
+        <a href="/prestamos" class="hover:text-white flex items-center w-full">
           <i class="fas fa-shopping-bag"></i>
-          <a href="/prestamos" class="ml-2 hover:text-white">Préstamos</a>
-        </li>
-        <li class="flex items-center">
+          <span class="ml-2 hidden md:inline">Préstamos</span>
+        </a>
+      </li>
+      <li class="flex items-center">
+        <a href="/extravio" class="hover:text-white flex items-center w-full">
           <i class="fas fa-exclamation-circle"></i>
-          <a href="/extravio" class="ml-2 hover:text-white">Extravio</a>
-        </li>
-        <li class="flex items-center">
+          <span class="ml-2 hidden md:inline">Extravio</span>
+        </a>
+      </li>
+      <li class="flex items-center">
+        <a href="/donaciones" class="hover:text-white flex items-center w-full">
           <i class="fas fa-donate"></i>
-          <a href="/donaciones" class="ml-2 hover:text-white">Donaciones</a>
-        </li>
-        <li class="flex items-center">
+          <span class="ml-2 hidden md:inline">Donaciones</span>
+        </a>
+      </li>
+      <li class="flex items-center">
+        <a href="/perfil" class="hover:text-white flex items-center w-full">
           <i class="fas fa-user-circle"></i>
-          <a href="/perfil" class="ml-2 hover:text-white">Perfil</a>
-        </li>
-        <li class="flex items-center">
+          <span class="ml-2 hidden md:inline">Perfil</span>
+        </a>
+      </li>
+      <li class="flex items-center">
+        <a href="/cambiar-a-pro" class="hover:text-white flex items-center w-full">
           <i class="fas fa-gem"></i>
-          <a href="/cambiar-a-pro" class="ml-2 hover:text-white">Cambiar a Pro</a>
-        </li>
-        <li class="flex items-center">
+          <span class="ml-2 hidden md:inline">Cambiar a Pro</span>
+        </a>
+      </li>
+      <li class="flex items-center">
+        <a href="/ayuda" class="hover:text-white flex items-center w-full">
           <i class="fas fa-question-circle"></i>
-          <a href="/ayuda" class="ml-2 hover:text-white">Ayuda</a>
-        </li>
-        <li class="flex items-center">
+          <span class="ml-2 hidden md:inline">Ayuda</span>
+        </a>
+      </li>
+      <li class="flex items-center">
+        <a href="/signin" class="hover:text-white flex items-center w-full">
           <i class="fas fa-sign-in-alt"></i>
-          <a href="/signin" class="ml-2 hover:text-white">Cerrar Sesión</a>
-        </li>
-      </ul>
-    </div>
-    <div class="main-area w-3/4">
-      <div class="container mx-auto">
-        <h1 class="text-3xl font-bold mb-4 text-center text-white">Usuarios</h1>
-    
-        <!-- Botón para abrir el modal -->
-        <div class="flex justify-end mb-4">
-          <a href='/formulario'>
-            <button class="boton-agregar">
-              Nuevo Usuario
-            </button>
-          </a>
-        </div>
-    
-        <!-- Tabla de usuarios -->
-        <table class="tabla-usuarios w-full border-collapse border border-gray-500">
-          <thead>
-            <tr class="bg-gray-700 text-white">
-              <th class="border border-gray-500 p-2">Nombre</th>
-              <th class="border border-gray-500 p-2">Cargo</th>
-              <th class="border border-gray-500 p-2">Num. Control</th>
-            </tr>
-          </thead>
-          <tbody>
-           
-          </tbody>
-        </table>
+          <span class="ml-2 hidden md:inline">Cerrar Sesión</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+    <!-- Main Content -->
+    <div class="flex-1 bg-[#334155] p-8">
+      <!-- Contenido principal -->
+      <div class="container md:w-1/3">
+        <h1 class="text-3xl font-bold mb-6 text-white">Usuarios</h1>
       </div>
+  
+      <!-- Botón para abrir el formulario -->
+      <div class="flex justify-medium mb-4">
+        <a href="/formulario">
+          <button class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded shadow-md">
+            Nuevo Usuario
+          </button>
+        </a>
+      </div>
+  
+      <!-- Tabla de usuarios -->
+      <table class="w-full border-collapse border border-gray-500">
+        <thead>
+          <tr class="bg-gray-700 text-white">
+            <th class="border border-gray-500 p-2">Nombre</th>
+            <th class="border border-gray-500 p-2">Cargo</th>
+            <th class="border border-gray-500 p-2">Num. Control</th>
+            <th class="border border-gray-500 p-2">Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Ejemplo de fila de usuario -->
+          <tr class="bg-gray-800 text-gray-300 hover:bg-gray-700 transition duration-200">
+            <td class="border border-gray-500 p-2">Juan Pérez</td>
+            <td class="border border-gray-500 p-2">Administrador</td>
+            <td class="border border-gray-500 p-2">12345678</td>
+            <td class="border border-gray-500 p-{2 flex gap-2">
+              <!-- Botón de editar -->
+              <a href="/editar-usuario/{id}">
+                <button class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">
+                  Editar
+                </button>
+              </a>
+              <!-- Botón de eliminar -->
+              <button 
+                class="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded"
+                onclick="confirmDelete('{id}')">
+                Eliminar
+              </button>
+              <!-- Botón de historial -->
+              <a href="/historial-usuario/{id}">
+                <button class="bg-yellow-500 hover:bg-yellow-600 text-white py-2 px-4 rounded">
+                  Historial
+                </button>
+              </a>
+            </td>
+          </tr>
+          <!-- Otro ejemplo de fila -->
+          <tr class="bg-gray-800 text-gray-300 hover:bg-gray-700 transition duration-200">
+            <td class="border border-gray-500 p-2">María López</td>
+            <td class="border border-gray-500 p-2">Estudiante</td>
+            <td class="border border-gray-500 p-2">87654321</td>
+            <td class="border border-gray-500 p-2 flex gap-2">
+              <a href="/editar-usuario/{id}">
+                <button class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">
+                  Editar
+                </button>
+              </a>
+              <button 
+                class="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded"
+                onclick="confirmDelete('{id}')">
+                Eliminar
+              </button>
+              <a href="/historial-usuario/{id}">
+                <button class="bg-yellow-500 hover:bg-yellow-600 text-white py-2 px-4 rounded">
+                  Historial
+                </button>
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-    
+  </div>
+  
+  <script>
+    // Función para confirmar eliminación
+    function confirmDelete(userId) {
+      const confirmation = confirm("¿Estás seguro de que deseas eliminar este usuario?");
+      if (confirmation) {
+        // Redirigir a la ruta de eliminación o hacer la petición AJAX
+        window.location.href = `/eliminar-usuario/${userId}`;
+      }
+    }
+  </script>
+  

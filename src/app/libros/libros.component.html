@@ -1,95 +1,204 @@
-<div class="flex">
-    <!-- Sidebar -->
-    <div class="sidebar w-1/4 min-h-screen p-4 bg-gray-800">
-      <h1 class="text-3xl font-bold mb-4 text-center flex items-center text-white">
-        <i class="fas fa-book mr-2"></i>
-        BookUnit
-      </h1>
-      <ul class="space-y-4 text-gray-300">
-        <li class="flex items-center">
+<div class="flex min-h-screen">
+  <!-- Sidebar -->
+  <div id="sidebar" class="transition-all duration-300 w-16 md:w-64 bg-gray-800 min-h-screen p-4">
+    <h1 class="text-2xl font-bold mb-4 text-center hidden md:flex items-center text-white">
+      <i class="fas fa-book-open mr-2"></i>
+      BookUnit
+    </h1>
+    <ul class="space-y-4 text-gray-300">
+      <li class="flex items-center">
+        <a href="/administracion" class="hover:text-white flex items-center w-full">
           <i class="fas fa-chart-pie"></i>
-          <a href="/administracion" class="ml-2 hover:text-white">Administración</a>
-        </li>
-        <li class="flex items-center">
+          <span class="ml-2 hidden md:inline">Administración</span>
+        </a>
+      </li>
+      <li class="flex items-center">
+        <a href="/usuarios" class="hover:text-white flex items-center w-full">
           <i class="fas fa-users"></i>
-          <a href="/usuarios" class="ml-2 hover:text-white">Usuarios</a>
-        </li>
-        <li class="flex items-center">
+          <span class="ml-2 hidden md:inline">Usuarios</span>
+        </a>
+      </li>
+      <li class="flex items-center">
+        <a href="/libros" class="hover:text-white flex items-center w-full">
           <i class="fas fa-book"></i>
-          <a href="/libros" class="ml-2 hover:text-white">Libros</a>
-        </li>
-        <li class="flex items-center">
+          <span class="ml-2 hidden md:inline">Libros</span>
+        </a>
+      </li>
+      <li class="flex items-center">
+        <a href="/libros-digitales" class="hover:text-white flex items-center w-full">
           <i class="fas fa-file-pdf"></i>
-          <a href="/libros-digitales" class="ml-2 hover:text-white">Libros Digitales</a>
-        </li>
-        <li class="flex items-center">
+          <span class="ml-2 hidden md:inline">Libros Digitales</span>
+        </a>
+      </li>
+      <li class="flex items-center">
+        <a href="/prestamos" class="hover:text-white flex items-center w-full">
           <i class="fas fa-shopping-bag"></i>
-          <a href="/prestamos" class="ml-2 hover:text-white">Préstamos</a>
-        </li>
-        <li class="flex items-center">
+          <span class="ml-2 hidden md:inline">Préstamos</span>
+        </a>
+      </li>
+      <li class="flex items-center">
+        <a href="/extravio" class="hover:text-white flex items-center w-full">
           <i class="fas fa-exclamation-circle"></i>
-          <a href="/extravio" class="ml-2 hover:text-white">Extravio</a>
-        </li>
-        <li class="flex items-center">
+          <span class="ml-2 hidden md:inline">Extravio</span>
+        </a>
+      </li>
+      <li class="flex items-center">
+        <a href="/donaciones" class="hover:text-white flex items-center w-full">
           <i class="fas fa-donate"></i>
-          <a href="/donaciones" class="ml-2 hover:text-white">Donaciones</a>
-        </li>
-        <li class="flex items-center">
+          <span class="ml-2 hidden md:inline">Donaciones</span>
+        </a>
+      </li>
+      <li class="flex items-center">
+        <a href="/perfil" class="hover:text-white flex items-center w-full">
           <i class="fas fa-user-circle"></i>
-          <a href="/perfil" class="ml-2 hover:text-white">Perfil</a>
-        </li>
-        <li class="flex items-center">
+          <span class="ml-2 hidden md:inline">Perfil</span>
+        </a>
+      </li>
+      <li class="flex items-center">
+        <a href="/cambiar-a-pro" class="hover:text-white flex items-center w-full">
           <i class="fas fa-gem"></i>
-          <a href="/cambiar-a-pro" class="ml-2 hover:text-white">Cambiar a Pro</a>
-        </li>
-        <li class="flex items-center">
+          <span class="ml-2 hidden md:inline">Cambiar a Pro</span>
+        </a>
+      </li>
+      <li class="flex items-center">
+        <a href="/ayuda" class="hover:text-white flex items-center w-full">
           <i class="fas fa-question-circle"></i>
-          <a href="/ayuda" class="ml-2 hover:text-white">Ayuda</a>
-        </li>
-        <li class="flex items-center">
+          <span class="ml-2 hidden md:inline">Ayuda</span>
+        </a>
+      </li>
+      <li class="flex items-center">
+        <a href="/signin" class="hover:text-white flex items-center w-full">
           <i class="fas fa-sign-in-alt"></i>
-          <a href="/signin" class="ml-2 hover:text-white">Cerrar Sesión</a>
-        </li>
-      </ul>
-    </div>
-  
-    <!-- Main Content -->
-    <div class="main-area w-3/4 bg-[#334155] min-h-screen p-8">
-      <div class="container mx-auto">
-        <h1 class="text-3xl font-bold mb-6 text-white text-center">Libros</h1>
-  
-        <!-- Botón para abrir el formulario -->
-        <div class="flex justify-end mb-4">
-          <a href="/formulario-libros">
-            <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded shadow-md">
-              Nuevo Libro
-            </button>
-          </a>
-        </div>
-  
-         <!-- Tabla de libros -->
-      <div class="overflow-x-auto">
-        <table class="w-full border-collapse shadow-lg">
-          <thead>
-            <tr class="bg-gradient-to-r from-blue-500 to-purple-500 text-white">
-              <th class="border border-gray-500 p-3 text-left">Título</th>
-              <th class="border border-gray-500 p-3 text-left">Autor</th>
-              <th class="border border-gray-500 p-3 text-left">Editorial</th>
-              <th class="border border-gray-500 p-3 text-left">ISBN</th>
-              <th class="border border-gray-500 p-3 text-left">Categoría</th>
-              <th class="border border-gray-500 p-3 text-left">Idioma</th>
-              <th class="border border-gray-500 p-3 text-left">Copias Totales</th>
-              <th class="border border-gray-500 p-3 text-left">Copias Disponibles</th>
-              <th class="border border-gray-500 p-3 text-left">Fecha Publicación</th>
-              <th class="border border-gray-500 p-3 text-left">Descripción</th>
-              <th class="border border-gray-500 p-3 text-left">Activo</th>
-            </tr>
-          </thead>
-          <tbody>
+          <span class="ml-2 hidden md:inline">Cerrar Sesión</span>
+        </a>
+      </li>
+    </ul>
+  </div>
 
-          </tbody>
-        </table>
+  <!-- Main Content -->
+  <div class="flex-1 bg-[#334155] p-8">
+  
+    <!-- Contenido principal -->
+    <div class="container md:w-1/3">
+      <h1 class="text-3xl font-bold mb-6 text-white">Libros</h1>
+    </div>
+
+    <!-- Buscador de libros (un solo campo para todos los filtros) -->
+    <div class="flex justify-between mb-4">
+      <div class="w-full md:w-1/2">
+        <input
+          type="text"
+          id="searchAll"
+          class="w-full p-2 rounded bg-gray-800 text-white border border-gray-500"
+          placeholder="Buscar por Título, Autor o Género"
+          onkeyup="filterBooks()"
+        />
       </div>
     </div>
+
+    <!-- Botón para abrir el formulario -->
+    <div class="flex justify-medium mb-4">
+      <a href="/formulario-libros">
+        <button class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded shadow-md">
+          Nuevo Libro
+        </button>
+      </a>
+    </div>
+
+    <!-- Tabla de libros -->
+    <div class="overflow-x-auto">
+      <table class="w-full border-collapse shadow-lg">
+        <thead>
+          <tr class="bg-gray-700 text-white">
+            <th class="border border-gray-500 p-3 text-left">Título</th>
+            <th class="border border-gray-500 p-3 text-left">Autor</th>
+            <th class="border border-gray-500 p-3 text-left">Editorial</th>
+            <th class="border border-gray-500 p-3 text-left">ISBN</th>
+            <th class="border border-gray-500 p-3 text-left">Género</th>
+            <th class="border border-gray-500 p-3 text-left">Idioma</th>
+            <th class="border border-gray-500 p-3 text-left">Copias Totales</th>
+            <th class="border border-gray-500 p-3 text-left">Copias Disponibles</th>
+            <th class="border border-gray-500 p-3 text-left">Fecha Publicación</th>
+            <th class="border border-gray-500 p-3 text-left">Descripción</th>
+            <th class="border border-gray-500 p-3 text-left">Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="bg-gray-800 text-gray-300 hover:bg-gray-700 transition duration-200">
+            <td class="border border-gray-500 p-3">Cien Años de Soledad</td>
+            <td class="border border-gray-500 p-3">Gabriel García Márquez</td>
+            <td class="border border-gray-500 p-3">Sudamericana</td>
+            <td class="border border-gray-500 p-3">978-0809</td>
+            <td class="border border-gray-500 p-3">Novela</td>
+            <td class="border border-gray-500 p-3">Español</td>
+            <td class="border border-gray-500 p-3">10</td>
+            <td class="border border-gray-500 p-3">7</td>
+            <td class="border border-gray-500 p-3">1967-05-30</td>
+            <td class="border border-gray-500 p-3">Una obra maestra de realismo mágico.</td>
+            <td class="border border-gray-500 p-3">
+              <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded shadow-md mb-2">
+                List de Deseos
+              </button>
+              <button class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded shadow-md">
+                Reservar
+              </button>
+            </td>
+          </tr>
+          <tr class="bg-gray-800 text-gray-300 hover:bg-gray-700 transition duration-200">
+            <td class="border border-gray-500 p-3">Soledad</td>
+            <td class="border border-gray-500 p-3">Juan Martinez Márquez</td>
+            <td class="border border-gray-500 p-3">Sol</td>
+            <td class="border border-gray-500 p-3">978-0307</td>
+            <td class="border border-gray-500 p-3">Suspenso</td>
+            <td class="border border-gray-500 p-3">Español</td>
+            <td class="border border-gray-500 p-3">15</td>
+            <td class="border border-gray-500 p-3">3</td>
+            <td class="border border-gray-500 p-3">1970-12-10</td>
+            <td class="border border-gray-500 p-3">Una obra sobre la soledad.</td>
+            <td class="border border-gray-500 p-3">
+              <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded shadow-md mb-2">
+                List de Deseos
+              </button>
+              <button class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded shadow-md">
+                Reservar
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
-  
+</div>
+
+<script>
+  const sidebar = document.getElementById("sidebar");
+  const toggleButton = document.getElementById("toggleMenu");
+
+  toggleButton.addEventListener("click", () => {
+    sidebar.classList.toggle("w-16");
+    sidebar.classList.toggle("md:w-64");
+  });
+
+  function filterBooks() {
+    const searchTitle = document.getElementById('searchTitle').value.toLowerCase();
+    const searchAuthor = document.getElementById('searchAuthor').value.toLowerCase();
+    const searchGenre = document.getElementById('searchGenre').value.toLowerCase();
+    const rows = document.querySelectorAll('table tbody tr');
+
+    rows.forEach(row => {
+      const title = row.cells[0].textContent.toLowerCase();
+      const author = row.cells[1].textContent.toLowerCase();
+      const genre = row.cells[4].textContent.toLowerCase();
+      
+      if (
+        title.includes(searchTitle) &&
+        author.includes(searchAuthor) &&
+        genre.includes(searchGenre)
+      ) {
+        row.style.display = '';
+      } else {
+        row.style.display = 'none';
+      }
+    });
+  }
+</script>

@@ -14,6 +14,12 @@ import { LibrosDigitalesComponent } from './libros-digitales/libros-digitales.co
 import { FormularioComponent } from './formulario/formulario.component';
 import { FormularioLibrosComponent } from './formulario-libros/formulario-libros.component';
 import { FormularioLibrosDigitalesComponent } from './formulario-libros-digitales/formulario-libros-digitales.component';
+import { PrestamosComponent } from './prestamos/prestamos.component';
+import { HistorialPrestamosComponent } from './historial-prestamos/historial-prestamos.component';
+import { ExtravioComponent } from './extravio/extravio.component';
+import { HistorialExtravioComponent } from './historial-extravio/historial-extravio.component';
+import { DonacionesComponent } from './donaciones/donaciones.component';
+import { HistorialDonacionesComponent } from './historial-donaciones/historial-donaciones.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +38,12 @@ import { FormularioLibrosDigitalesComponent } from './formulario-libros-digitale
     FormularioComponent,
     FormularioLibrosComponent,
     FormularioLibrosDigitalesComponent,
+    PrestamosComponent,
+    HistorialPrestamosComponent,
+    ExtravioComponent,
+    HistorialExtravioComponent,
+    DonacionesComponent,
+    HistorialDonacionesComponent,
 
   ],
   providers: [],

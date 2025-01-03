@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Perfil - BookUnit</title>
+  <title>Ayuda - BookUnit</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -11,13 +11,14 @@
 </head>
 <body class="bg-gray-900 text-gray-300">
   <div class="flex">
-    <!-- Panel lateral -->
-    <div class="sidebar w-1/4 min-h-screen p-4 bg-gray-800">
+    <!-- Barra lateral -->
+    <div class="sidebar hidden md:block w-1/4 p-4 bg-gray-800 min-h-screen">
       <h1 class="text-3xl font-bold mb-4 text-center flex items-center text-white">
         <i class="fas fa-book-open mr-2"></i>
         BookUnit
       </h1>
       <ul class="space-y-4 text-gray-300">
+        <!-- Opciones de menú -->
         <li class="flex items-center">
           <i class="fas fa-chart-pie"></i>
           <a href="/administracion" class="ml-2 hover:text-white">Administración</a>
@@ -64,10 +65,40 @@
         </li>
       </ul>
     </div>
-       <!-- Área de trabajo principal -->
-       <div class="main-area w-3/4 p-6">
-       <img src="le_imagen/zoo.jpg" alt="random" class="mx-auto mb-6">
+
+    <!-- Área principal -->
+    <div class="main-area w-full md:w-3/4 p-8">
+      <!-- Descripción centrada -->
+      <div class="bg-gray-800 text-gray-300 p-8 rounded-lg shadow-lg text-center mx-auto max-w-4xl">
+        <h2 class="text-2xl font-bold text-white mb-4">Información General</h2>
+        <p>
+          Este sistema está diseñado para optimizar la gestión y organización de bibliotecas, mejorando la experiencia de los usuarios y facilitando el trabajo del personal administrativo.
+        </p>
+      </div>
+
+      <!-- Contenedor de tarjetas -->
+      <div class="flex justify-center gap-x-4 mt-8">
+        <!-- Primera tarjeta -->
+        <div class="bg-gray-800 text-white rounded-lg p-6 w-64">
+          <!-- Espacio para la imagen -->
+          <img [src]="imagenHect" alt="imagen de Hector" class="rounded-full mx-auto" style="width: 150px; height: 150px;">
+          <h2 class="mt-4 text-center font-bold">Hector</h2>
+          <p class="text-center">Ocupación: Bibliotecario</p>
+          <p class="text-center">Número de contacto:<br> +52 123 45 6789</p>
+          <a [href]="'mailto:' + correo" class="text-center text-blue-400 hover:underline block">{{ correo }}</a>
         </div>
+
+        <!-- Segunda tarjeta -->
+        <div class="bg-gray-800 text-white rounded-lg p-6 w-64">
+          <!-- Aquí se cambia la imagen de fondo a la imagen de Diego -->
+          <img [src]="imagenDCG" alt="imagen de Diego" class="rounded-full mx-auto" style="width: 150px; height: 150px; object-fit: cover;" />
+          <h2 class="mt-4 text-center font-bold">Diego C G</h2>
+          <p class="text-center">Ocupación: Administrador</p>
+          <p class="text-center">Número de contacto:<br> +52 18 02 5658</p>
+          <a [href]="'mailto:' + correoDCG" class="text-center text-blue-400 hover:underline block">{{ correoDCG }}</a>
+        </div>
+      </div>
     </div>
+  </div>
 </body>
 </html>

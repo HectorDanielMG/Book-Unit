@@ -20,6 +20,9 @@ import { ExtravioComponent } from './extravio/extravio.component';
 import { HistorialExtravioComponent } from './historial-extravio/historial-extravio.component';
 import { DonacionesComponent } from './donaciones/donaciones.component';
 import { HistorialDonacionesComponent } from './historial-donaciones/historial-donaciones.component';
+import { PerfilComponent } from './perfil/perfil.component'; // Import PerfilComponent
+import { ProComponent } from './pro/pro.component'; // Import ProComponent
+import { AyudaComponent } from './ayuda/ayuda.component'; // Import AyudaComponent
 
 @NgModule({
   declarations: [
@@ -44,7 +47,9 @@ import { HistorialDonacionesComponent } from './historial-donaciones/historial-d
     HistorialExtravioComponent,
     DonacionesComponent,
     HistorialDonacionesComponent,
-
+    PerfilComponent, // Importar PerfilComponent aquí
+    ProComponent, // Importar ProComponent aquí
+    AyudaComponent, // Importar AyudaComponent aquí
   ],
   providers: [],
 })

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PRÉSTAMOS | BookUnit</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link rel="stylesheet" href="prestamos.component.css">
+</head>
+<body class="bg-gray-900 text-gray-300">
+  <div class="flex">
+    <!-- Panel lateral -->
+    <div class="sidebar w-1/4 min-h-screen p-4 bg-gray-800">
+      <h1 class="text-3xl font-bold mb-4 text-center flex items-center text-white">
+        <i class="fas fa-book-open mr-2"></i>
+        BookUnit
+      </h1>
+      <ul class="space-y-4 text-gray-300">
+        <li class="flex items-center">
+          <i class="fas fa-chart-pie"></i>
+          <a href="/administracion" class="ml-2 hover:text-white">Administración</a>
+        </li>
+        <li class="flex items-center">
+          <i class="fas fa-users"></i>
+          <a href="/usuarios" class="ml-2 hover:text-white">Usuarios</a>
+        </li>
+        <li class="flex items-center">
+          <i class="fas fa-book"></i>
+          <a href="/libros" class="ml-2 hover:text-white">Libros</a>
+        </li>
+        <li class="flex items-center">
+          <i class="fas fa-file-pdf"></i>
+          <a href="/libros-digitales" class="ml-2 hover:text-white">Libros Digitales</a>
+        </li>
+        <li class="flex items-center">
+          <i class="fas fa-shopping-bag"></i>
+          <a href="/prestamos" class="ml-2 hover:text-white">Préstamos</a>
+        </li>
+        <li class="flex items-center">
+          <i class="fas fa-exclamation-circle"></i>
+          <a href="/extravio" class="ml-2 hover:text-white">Extravio</a>
+        </li>
+        <li class="flex items-center">
+          <i class="fas fa-donate"></i>
+          <a href="/donaciones" class="ml-2 hover:text-white">Donaciones</a>
+        </li>
+        <li class="flex items-center">
+          <i class="fas fa-user-circle"></i>
+          <a href="/perfil" class="ml-2 hover:text-white">Perfil</a>
+        </li>
+        <li class="flex items-center">
+          <i class="fas fa-gem"></i>
+          <a href="/pro" class="ml-2 hover:text-white">Cambiar a Pro</a>
+        </li>
+        <li class="flex items-center">
+          <i class="fas fa-question-circle"></i>
+          <a href="/ayuda" class="ml-2 hover:text-white">Ayuda</a>
+        </li>
+        <li class="flex items-center">
+          <i class="fas fa-sign-in-alt"></i>
+          <a class="ml-2 hover:text-blue-500 hover:underline cursor-pointer" (click)="onSignOut()">Cerrar Sesión</a>
+        </li>
+      </ul>
+    </div>
+<!------------------------->
+
+<div class="container mx-auto p-6 bg-gray-900 text-gray-300">
+  <h2 class="text-2xl font-bold text-white mb-4 text-center">REGISTRO DE PRÉSTAMOS</h2>
+
+  <!-- Formulario -->
+  <form class="space-y-4 bg-gray-800 p-6 rounded-md shadow-md">
+    <div>
+      <label for="usuario" class="block text-gray-400">Usuario que solicitó el libro:</label>
+      <input
+        id="usuario"
+        type="text"
+        class="w-full p-2 rounded-md bg-gray-700 text-white border-gray-600"
+        
+        name="usuario"
+        required
+      />
+    </div>
+
+    <div>
+      <label for="libro" class="block text-gray-400">Ejemplar solicitado:</label>
+      <input
+        id="libro"
+        type="text"
+        class="w-full p-2 rounded-md bg-gray-700 text-white border-gray-600"
+        
+        name="libro"
+        required
+      />
+    </div>
+
+    <div>
+      <label for="diaPrestamo" class="block text-gray-400">Fecha del préstamo:</label>
+      <input
+        id="diaPrestamo"
+        type="date"
+        class="w-full p-2 rounded-md bg-gray-700 text-white border-gray-600"
+        
+        name="diaPrestamo"
+        required
+      />
+    </div>
+
+    <div>
+      <label for="diaDevolucion" class="block text-gray-400">Día de devolución:</label>
+      <input
+        id="diaDevolucion"
+        type="date"
+        class="w-full p-2 rounded-md bg-gray-700 text-white border-gray-600"
+        
+        name="diaDevolucion"
+        required
+      />
+    </div>
+
+    <div>
+      <label for="estado" class="block text-gray-400">Estado del préstamo:</label>
+      <select
+        id="estado"
+        class="w-full p-2 rounded-md bg-gray-700 text-white border-gray-600"
+        
+        name="estado"
+        required
+      >
+        <option value="activo">Activo</option>
+        <option value="finalizado">Finalizado</option>
+        <option value="vencido">Vencido</option>
+      </select>
+    </div>
+
+    <button
+      type="submit"
+      class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md"
+      (click)="guardarPrestamo()"
+    >
+      Guardar Préstamo
+    </button>
+  </form>
+
+  <!-- Links adicionales -->
+  <div class="mt-6 flex space-x-4">
+    <a
+      href="./historial-prestamos"
+      class="text-blue-400 hover:text-blue-500 underline"
+    >
+      Ver Historial
+    </a>
+  </div>
+
+</div>
+<!------------------------->
+  </div>
+</body>
+</html>

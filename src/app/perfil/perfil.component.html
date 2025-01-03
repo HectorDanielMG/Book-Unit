@@ -10,14 +10,15 @@
   <link rel="stylesheet" href="perfil.component.css">
 </head>
 <body class="bg-gray-900 text-gray-300">
-  <div class="flex">
+  <div class="flex flex-col md:flex-row">
     <!-- Panel lateral -->
-    <div class="sidebar w-1/4 min-h-screen p-4 bg-gray-800">
+    <div class="sidebar w-full md:w-1/4 min-h-screen p-4 bg-gray-800">
       <h1 class="text-3xl font-bold mb-4 text-center flex items-center text-white">
         <i class="fas fa-book-open mr-2"></i>
         BookUnit
       </h1>
       <ul class="space-y-4 text-gray-300">
+        <!-- Opciones de menú -->
         <li class="flex items-center">
           <i class="fas fa-chart-pie"></i>
           <a href="/administracion" class="ml-2 hover:text-white">Administración</a>
@@ -64,29 +65,29 @@
         </li>
       </ul>
     </div>
-
+  
     <!-- Área de trabajo principal -->
-    <div class="main-area w-3/4 p-6">
+    <div class="main-area w-full md:w-3/4 p-6">
       <div class="flex flex-col items-center">
-        <div class="foto_perfil">
+        <div class="foto_perfil mb-4">
           <img [src]="imagenDCG" alt="imagen de Diego" class="rounded-full mx-auto" style="width: 150px; height: 150px; object-fit: cover;" />
         </div>
-        <div class="contenedor">
-          <div class="grupo">
+        <div class="contenedor w-full max-w-md">
+          <div class="grupo mb-4">
             <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" class="input-field" placeholder="Nombre de Usuario" disabled>
+            <input type="text" id="nombre" class="input-field w-full p-2 border border-gray-300 rounded" placeholder="Nombre de Usuario" disabled>
           </div>
-          <div class="grupo">
+          <div class="grupo mb-4">
             <label for="apellidos">Apellidos</label>
-            <input type="text" id="apellidos" class="input-field" placeholder="Apellidos de Usuario" disabled>
+            <input type="text" id="apellidos" class="input-field w-full p-2 border border-gray-300 rounded" placeholder="Apellidos de Usuario" disabled>
           </div>
-          <div class="grupo">
+          <div class="grupo mb-4">
             <label for="no-cuenta">No de cuenta</label>
-            <input type="text" id="no-cuenta" class="input-field" placeholder="Número de control" disabled>
+            <input type="text" id="no-cuenta" class="input-field w-full p-2 border border-gray-300 rounded" placeholder="Número de control" disabled>
           </div>
-          <div class="grupo">
+          <div class="grupo mb-4">
             <label for="tipo-cuenta">Tipo de cuenta</label>
-            <select id="tipo-cuenta" class="input-field">
+            <select id="tipo-cuenta" class="input-field w-full p-2 border border-gray-300 rounded" disabled>
               <option value="basica">Cuenta básica</option>
               <option value="pro">Cuenta pro</option>
             </select>
@@ -94,6 +95,6 @@
         </div>        
       </div>
     </div>
-  </div>
+  </div>  
 </body>
 </html>

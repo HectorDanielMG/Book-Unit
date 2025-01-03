@@ -11,13 +11,14 @@
 </head>
 <body class="bg-gray-900 text-gray-300">
   <div class="flex">
-    <!-- Panel lateral -->
-    <div class="sidebar w-1/4 min-h-screen p-4 bg-gray-800">
+    <!-- Barra lateral -->
+    <div class="sidebar hidden md:block w-1/4 p-4 bg-gray-800 min-h-screen">
       <h1 class="text-3xl font-bold mb-4 text-center flex items-center text-white">
         <i class="fas fa-book-open mr-2"></i>
         BookUnit
       </h1>
       <ul class="space-y-4 text-gray-300">
+        <!-- Opciones de menú -->
         <li class="flex items-center">
           <i class="fas fa-chart-pie"></i>
           <a href="/administracion" class="ml-2 hover:text-white">Administración</a>
@@ -66,30 +67,29 @@
     </div>
 
     <!-- Área de trabajo principal -->
-    <div class="flex flex-col items-center">
-        <div class="perfil-contenedor">
-            <div class="foto_perfil">
-              <img [src]="imagenDCG" alt="imagen de Diego" class="rounded-full mx-auto" style="width: 150px; height: 150px; object-fit: cover;" />
-            </div>
-            
-            <div class="tarjetas-contenedor">
-              <!-- Tarjeta izquierda -->
-              <div class="tarjeta">
-                <h2>Membresia básica</h2>
-                <p>Beneficios comunes</p>
-                <p>Acceso limitado</p>
-                <p>Otra huevada corriente aqui</p>
-              </div>
-          
-              <!-- Tarjeta derecha -->
-              <div class="tarjeta">
-                <h2>Membresia pro</h2>
-                <p>Beneficios adicionales</p>
-                <p>Acceso ilimitado </p>
-                <p>Otra huevada mas</p>
-              </div>
-            </div>
+    <div class="main-area w-full md:w-3/4 p-6 flex flex-col items-center">
+      <div class="perfil-contenedor w-full max-w-md">
+        <div class="foto_perfil mb-4">
+          <img [src]="imagenDCG" alt="imagen de Diego" class="rounded-full mx-auto" style="width: 150px; height: 150px; object-fit: cover;" />
+        </div>
+        
+        <div class="tarjetas-contenedor grid grid-cols-1 md:grid-cols-2 gap-4">
+          <!-- Tarjeta izquierda -->
+          <div class="tarjeta p-4 border border-gray-300 rounded">
+            <h2 class="text-xl font-bold mb-2">Membresia básica</h2>
+            <p>Beneficios comunes</p>
+            <p>Acceso limitado</p>
+            <p>Otra huevada corriente aqui</p>
           </div>
+          <!-- Tarjeta derecha -->
+          <div class="tarjeta p-4 border border-gray-300 rounded">
+            <h2 class="text-xl font-bold mb-2">Membresia pro</h2>
+            <p>Beneficios premium</p>
+            <p>Acceso ilimitado</p>
+            <p>Contenido exclusivo</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </body>

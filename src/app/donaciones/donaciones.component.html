@@ -12,55 +12,77 @@
 <body class="bg-gray-900 text-gray-300">
   <div class="flex">
     <!-- Panel lateral -->
-    <div class="sidebar w-1/4 min-h-screen p-4 bg-gray-800">
-      <h1 class="text-3xl font-bold mb-4 text-center flex items-center text-white">
+    <div id="sidebar" class="transition-all duration-300 w-16 md:w-64 bg-gray-800 min-h-screen p-4">
+      <h1 class="text-2xl font-bold mb-4 text-center hidden md:flex items-center text-white">
         <i class="fas fa-book-open mr-2"></i>
         BookUnit
       </h1>
       <ul class="space-y-4 text-gray-300">
         <li class="flex items-center">
-          <i class="fas fa-chart-pie"></i>
-          <a href="/administracion" class="ml-2 hover:text-white">Administración</a>
+          <a href="/administracion" class="hover:text-white flex items-center w-full">
+            <i class="fas fa-chart-pie"></i>
+            <span class="ml-2 hidden md:inline">Administración</span>
+          </a>
         </li>
         <li class="flex items-center">
-          <i class="fas fa-users"></i>
-          <a href="/usuarios" class="ml-2 hover:text-white">Usuarios</a>
+          <a href="/usuarios" class="hover:text-white flex items-center w-full">
+            <i class="fas fa-users"></i>
+            <span class="ml-2 hidden md:inline">Usuarios</span>
+          </a>
         </li>
         <li class="flex items-center">
-          <i class="fas fa-book"></i>
-          <a href="/libros" class="ml-2 hover:text-white">Libros</a>
+          <a href="/libros" class="hover:text-white flex items-center w-full">
+            <i class="fas fa-book"></i>
+            <span class="ml-2 hidden md:inline">Libros</span>
+          </a>
         </li>
         <li class="flex items-center">
-          <i class="fas fa-file-pdf"></i>
-          <a href="/libros-digitales" class="ml-2 hover:text-white">Libros Digitales</a>
+          <a href="/libros-digitales" class="hover:text-white flex items-center w-full">
+            <i class="fas fa-file-pdf"></i>
+            <span class="ml-2 hidden md:inline">Libros Digitales</span>
+          </a>
         </li>
         <li class="flex items-center">
-          <i class="fas fa-shopping-bag"></i>
-          <a href="/prestamos" class="ml-2 hover:text-white">Préstamos</a>
+          <a href="/prestamos" class="hover:text-white flex items-center w-full">
+            <i class="fas fa-shopping-bag"></i>
+            <span class="ml-2 hidden md:inline">Préstamos</span>
+          </a>
         </li>
         <li class="flex items-center">
-          <i class="fas fa-exclamation-circle"></i>
-          <a href="/extravio" class="ml-2 hover:text-white">Extravio</a>
+          <a href="/extravio" class="hover:text-white flex items-center w-full">
+            <i class="fas fa-exclamation-circle"></i>
+            <span class="ml-2 hidden md:inline">Extravio</span>
+          </a>
         </li>
         <li class="flex items-center">
-          <i class="fas fa-donate"></i>
-          <a href="/donaciones" class="ml-2 hover:text-white">Donaciones</a>
+          <a href="/donaciones" class="hover:text-white flex items-center w-full">
+            <i class="fas fa-donate"></i>
+            <span class="ml-2 hidden md:inline">Donaciones</span>
+          </a>
         </li>
         <li class="flex items-center">
-          <i class="fas fa-user-circle"></i>
-          <a href="/perfil" class="ml-2 hover:text-white">Perfil</a>
+          <a href="/perfil" class="hover:text-white flex items-center w-full">
+            <i class="fas fa-user-circle"></i>
+            <span class="ml-2 hidden md:inline">Perfil</span>
+          </a>
         </li>
         <li class="flex items-center">
-          <i class="fas fa-gem"></i>
-          <a href="/pro" class="ml-2 hover:text-white">Cambiar a Pro</a>
+          <a href="/cambiar-a-pro" class="hover:text-white flex items-center w-full">
+            <i class="fas fa-gem"></i>
+            <span class="ml-2 hidden md:inline">Cambiar a Pro</span>
+          </a>
         </li>
         <li class="flex items-center">
-          <i class="fas fa-question-circle"></i>
-          <a href="/ayuda" class="ml-2 hover:text-white">Ayuda</a>
+          <a href="/ayuda" class="hover:text-white flex items-center w-full">
+            <i class="fas fa-question-circle"></i>
+            <span class="ml-2 hidden md:inline">Ayuda</span>
+          </a>
         </li>
         <li class="flex items-center">
-          <i class="fas fa-sign-in-alt"></i>
-          <a class="ml-2 hover:text-blue-500 hover:underline cursor-pointer" (click)="onSignOut()">Cerrar Sesión</a>
+          <a href="/signin" class="hover:text-white flex items-center w-full">
+            <i class="fas fa-sign-in-alt"></i>
+            <span class="ml-2 hidden md:inline">Cerrar Sesión</span>
+          </a>
         </li>
       </ul>
     </div>

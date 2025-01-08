@@ -8,7 +8,9 @@ import Swal from 'sweetalert2';
   templateUrl: './historial-donaciones.component.html',
   styleUrl: './historial-donaciones.component.css'
 })
+
 export class HistorialDonacionesComponent {
+  
   onSignOut(): void {
     Swal.fire({
       title: "¿Estás seguro de cerrar sesión?",

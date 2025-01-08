@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-donaciones',
@@ -7,6 +8,7 @@ import { Component } from '@angular/core';
   templateUrl: './donaciones.component.html',
   styleUrl: './donaciones.component.css'
 })
+
 export class DonacionesComponent {
   
   guardarDonacion() {
@@ -24,11 +26,22 @@ export class DonacionesComponent {
     // alert('¡Donación registrada con éxito!');
   }
 
-  // Método onSignOut
-  onSignOut() {
-    console.log('Sesión cerrada.');
-    // Aquí puedes agregar lógica adicional, como redirigir a otra página
-    // Por ejemplo, si usas Router: this.router.navigate(['/signin']);
+  onSignOut(): void {
+    Swal.fire({
+      title: "¿Estás seguro de cerrar sesión?",
+      text: "Se le regresará a la página de inicio.",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonText: "Sí, cerrar sesión",
+      cancelButtonText: "Cancelar",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire("Cerrando sesión...", "", "success").then(() => {
+          window.location.href = "#";
+        });
+      } else if (result.dismiss === Swal.DismissReason.cancel) {
+        Swal.fire("Cancelado", "Tu sesión sigue activa.", "info");
+      }
+    });
   }
-
 }

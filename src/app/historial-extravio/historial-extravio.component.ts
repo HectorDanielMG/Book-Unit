@@ -1,13 +1,15 @@
 import { Component } from '@angular/core';
 import Swal from 'sweetalert2';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-historial-extravio',
   standalone: true,
   templateUrl: './historial-extravio.component.html',
+  styleUrl: './historial-extravio.component.css'
 })
-export class HistorialExtravioComponent {
 
+export class HistorialExtravioComponent {
   
   onSignOut(): void {
     Swal.fire({
@@ -26,5 +28,30 @@ export class HistorialExtravioComponent {
         Swal.fire("Cancelado", "Tu sesión sigue activa.", "info");
       }
     });
+  }
+
+  constructor(private router: Router) {}
+  extravio = {
+    usuario: '',
+    libro: '',
+    fechaExtravio: '',
+    estadoExtravio: '',
+  };
+
+  historial: any[] = [];
+
+  guardarExtravio() {
+    // Agregar el extravío actual al historial
+    this.historial.push({ ...this.extravio });
+
+    // Limpiar el formulario
+    this.extravio = {
+      usuario: '',
+      libro: '',
+      fechaExtravio: '',
+      estadoExtravio: '',
+    };
+
+    alert('Extravío guardado con éxito!');
   }
 }

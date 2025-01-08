@@ -2,13 +2,16 @@ import { Component } from '@angular/core';
 import Swal from 'sweetalert2';
 
 @Component({
+  
   selector: 'app-prestamos',
   standalone: true,
   imports: [],
   templateUrl: './prestamos.component.html',
   styleUrl: './prestamos.component.css'
 })
+
 export class PrestamosComponent { 
+
   onSignOut(): void {
     Swal.fire({
       title: "¿Estás seguro de cerrar sesión?",

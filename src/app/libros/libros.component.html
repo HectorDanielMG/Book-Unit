@@ -55,7 +55,7 @@
         </a>
       </li>
       <li class="flex items-center">
-        <a href="/cambiar-a-pro" class="hover:text-white flex items-center w-full">
+        <a href="/pro" class="hover:text-white flex items-center w-full">
           <i class="fas fa-gem"></i>
           <span class="ml-2 hidden md:inline">Cambiar a Pro</span>
         </a>
@@ -67,10 +67,8 @@
         </a>
       </li>
       <li class="flex items-center">
-        <a href="/signin" class="hover:text-white flex items-center w-full">
-          <i class="fas fa-sign-in-alt"></i>
-          <span class="ml-2 hidden md:inline">Cerrar Sesión</span>
-        </a>
+        <i class="fas fa-sign-in-alt"></i>
+        <a class="ml-2 hover:text-blue-500 hover:underline cursor-pointer" (click)="onSignOut()">Cerrar Sesión</a>
       </li>
     </ul>
   </div>

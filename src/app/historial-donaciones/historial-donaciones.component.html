@@ -90,46 +90,113 @@
         </li>
       </ul>
     </div>
-<!------------------------->
 
-<div class="container mx-auto p-6 bg-gray-900 text-gray-300">
-  <h2 class="text-2xl font-bold text-white mb-4 text-center">HISTORIAL DE DONACIONES</h2>
+    <!-- Contenido del módulo Registro de Donaciones -->
+    <div class="container mx-auto p-6 bg-gray-900 text-gray-300">
+      <h2 class="text-2xl font-bold text-white mb-4 text-center">HISTORIAL DE DONACIONES</h2>
 
-  <!-- Links adicionales -->
-  <div class="mt-6 flex space-x-4">
-    <a
-      href="/donaciones"
-      class="text-green-400 hover:text-green-500 underline"
-    >
-    Volver
-    </a>
-  </div>
+          <!-- Links para volver a Donaciones -->
+          <div class="mt-6 flex space-x-4">
+            <a
+              href="/donaciones"
+              class="text-green-400 hover:text-green-500 underline"
+            >
+              Volver
+            </a>
+          </div>
 
-  <!-- Tabla del Historial -->
-  <div class="mt-8">
-    <h3 class="text-xl font-bold text-white mb-4">Historial de Donaciones</h3>
-    <table class="w-full text-gray-300 bg-gray-800 rounded-md">
-      <thead>
-        <tr class="bg-gray-700">
-          <th class="p-2">Donante</th>
-          <th class="p-2">Tipo</th>
-          <th class="p-2">Descripción</th>
-          <th class="p-2">Fecha</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let donacion of historial">
-          <td class="p-2">{{ donacion.donante }}</td>
-          <td class="p-2">{{ donacion.tipoDonacion }}</td>
-          <td class="p-2">{{ donacion.descripcion }}</td>
-          <td class="p-2">{{ donacion.fechaDonacion }}</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
+          <!-- Formulario -->
+          <form class="space-y-4 bg-gray-800 p-6 rounded-md shadow-md">
+            <div>
+              <label for="donante" class="block text-gray-400">Nombre del Donante:</label>
+              <input
+                id="donante"
+                type="text"
+                class="w-full p-2 rounded-md bg-gray-700 text-white border-gray-600"
+                name="donante"
+                required
+              />
+            </div>
 
-<!------------------------->
+            <div>
+              <label for="tipoDonacion" class="block text-gray-400">Tipo de Donación:</label>
+              <select
+                id="tipoDonacion"
+                class="w-full p-2 rounded-md bg-gray-700 text-white border-gray-600"
+                name="tipoDonacion"
+                required
+              >
+                <option value="libro">Libro</option>
+                <option value="monetaria">Monetaria</option>
+                <option value="otro">Otro</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="descripcion" class="block text-gray-400">Descripción:</label>
+              <textarea
+                id="descripcion"
+                rows="4"
+                class="w-full p-2 rounded-md bg-gray-700 text-white border-gray-600"
+                name="descripcion"
+                required
+              ></textarea>
+            </div>
+
+            <div>
+              <label for="fechaDonacion" class="block text-gray-400">Fecha de Donación:</label>
+              <input
+                id="fechaDonacion"
+                type="date"
+                class="w-full p-2 rounded-md bg-gray-700 text-white border-gray-600"
+                name="fechaDonacion"
+                required
+              />
+            </div>
+
+            <!-- <button
+              type="submit"
+              class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-md"
+              (click)="guardarDonacion()"
+            >
+              Registrar Donación
+            </button> -->
+          </form>
+
+
+      <!-- Links adicionales -->
+      <div class="mt-6 flex space-x-4">
+        <a
+          href="/donaciones"
+          class="text-green-400 hover:text-green-500 underline"
+        >
+        Volver
+        </a>
+      </div>
+
+      <!-- Tabla del Historial -->
+      <div class="mt-8">
+        <h3 class="text-xl font-bold text-white mb-4">Historial de Donaciones</h3>
+        <table class="w-full text-gray-300 bg-gray-800 rounded-md">
+          <thead>
+            <tr class="bg-gray-700">
+              <th class="p-2">Donante</th>
+              <th class="p-2">Tipo</th>
+              <th class="p-2">Descripción</th>
+              <th class="p-2">Fecha</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let donacion of historial">
+              <td class="p-2">{{ donacion.donante }}</td>
+              <td class="p-2">{{ donacion.tipoDonacion }}</td>
+              <td class="p-2">{{ donacion.descripcion }}</td>
+              <td class="p-2">{{ donacion.fechaDonacion }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
 </body>
 </html>

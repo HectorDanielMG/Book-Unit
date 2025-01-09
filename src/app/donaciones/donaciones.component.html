@@ -86,81 +86,22 @@
         </li>
       </ul>
     </div>
-<!------------------------->
 
-<div class="container mx-auto p-6 bg-gray-900 text-gray-300">
-  <h2 class="text-2xl font-bold text-white mb-4 text-center">REGISTRO DE DONACIONES</h2>
+    <!-- Contenido del módulo Donaciones -->
+    <div class="container mx-auto p-6 bg-gray-900 text-gray-300">
+      <h2 class="text-2xl font-bold text-white mb-4 text-center">REGISTRO DE DONACIONES</h2>
 
-  <!-- Formulario -->
-  <form class="space-y-4 bg-gray-800 p-6 rounded-md shadow-md">
-    <div>
-      <label for="donante" class="block text-gray-400">Nombre del Donante:</label>
-      <input
-        id="donante"
-        type="text"
-        class="w-full p-2 rounded-md bg-gray-700 text-white border-gray-600"
-        name="donante"
-        required
-      />
+      <!-- Tabla del Historial -->
+
+      <!-- Botón para abrir el formulario -->
+      <div class="flex justify-medium mb-4">
+        <a href="/historial-donaciones">
+          <button class="bg-green-600 hover:bg-green-700 text-white font-bold px-4 py-2 rounded-md shadow-md">
+            Nuevo
+          </button>
+        </a>
+      </div>
     </div>
-
-    <div>
-      <label for="tipoDonacion" class="block text-gray-400">Tipo de Donación:</label>
-      <select
-        id="tipoDonacion"
-        class="w-full p-2 rounded-md bg-gray-700 text-white border-gray-600"
-        name="tipoDonacion"
-        required
-      >
-        <option value="libro">Libro</option>
-        <option value="monetaria">Monetaria</option>
-        <option value="otro">Otro</option>
-      </select>
-    </div>
-
-    <div>
-      <label for="descripcion" class="block text-gray-400">Descripción:</label>
-      <textarea
-        id="descripcion"
-        rows="4"
-        class="w-full p-2 rounded-md bg-gray-700 text-white border-gray-600"
-        name="descripcion"
-        required
-      ></textarea>
-    </div>
-
-    <div>
-      <label for="fechaDonacion" class="block text-gray-400">Fecha de Donación:</label>
-      <input
-        id="fechaDonacion"
-        type="date"
-        class="w-full p-2 rounded-md bg-gray-700 text-white border-gray-600"
-        name="fechaDonacion"
-        required
-      />
-    </div>
-
-    <button
-      type="submit"
-      class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-md"
-      (click)="guardarDonacion()"
-    >
-      Registrar Donación
-    </button>
-  </form>
-
-  <!-- Links adicionales -->
-  <div class="mt-6 flex space-x-4">
-    <a
-      href="/historial-donaciones"
-      class="text-green-400 hover:text-green-500 underline"
-    >
-      Ver Historial
-    </a>
-  </div>
-</div>
-
-<!------------------------->
   </div>
 </body>
 </html>

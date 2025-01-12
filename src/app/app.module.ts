@@ -15,7 +15,7 @@ import { FormularioComponent } from './formulario/formulario.component';
 import { FormularioLibrosComponent } from './formulario-libros/formulario-libros.component';
 import { FormularioLibrosDigitalesComponent } from './formulario-libros-digitales/formulario-libros-digitales.component';
 import { PrestamosComponent } from './prestamos/prestamos.component';
-import { HistorialPrestamosComponent } from './historial-prestamos/historial-prestamos.component';
+import { HistorialPrestamosComponent } from './prestamos-registro/historial-prestamos.component';
 import { ExtravioComponent } from './extravio/extravio.component';
 import { HistorialExtravioComponent } from './historial-extravio/historial-extravio.component';
 import { DonacionesComponent } from './donaciones/donaciones.component';

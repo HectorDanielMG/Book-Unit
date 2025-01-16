@@ -9,16 +9,23 @@
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <link rel="stylesheet" href="pro.component.css">
 </head>
+
 <body class="bg-gray-900 text-gray-300">
   <div class="flex">
+    
     <!-- Barra lateral -->
     <div class="sidebar hidden md:block w-1/4 p-4 bg-gray-800 min-h-screen">
-      <h1 class="text-3xl font-bold mb-4 text-center flex items-center text-white">
-        <i class="fas fa-book-open mr-2"></i>
-        BookUnit
+      <h1 class="text-3xl font-bold mb-4 text-center hidden md:flex items-center text-white">
+        <li class="flex items-center">
+          <a href="/dashboard" class="hover:text-white flex items-center w-full">
+            <i class="fas fa-book-open mr-2"></i>
+            <span class="ml-2 hidden md:inline">BookUnit</span>
+          </a>
+        </li>
       </h1>
+      
+      <!-- Opciones de menú -->
       <ul class="space-y-4 text-gray-300">
-        <!-- Opciones de menú -->
         <li class="flex items-center">
           <i class="fas fa-chart-pie"></i>
           <a href="/administracion" class="ml-2 hover:text-white">Administración</a>
